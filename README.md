@@ -8,6 +8,9 @@ Atualmente, a mudança de decúbito é feita a cada duas horas de acordo com a i
 
 Projeto desenvolvido para inclusão nos hospitais do SUS com a proposta de uma ferramenta de facilitação e melhoria da qualidade de vida dos assistidos
 
+##Link projeto
+https://decubtech.netlify.app/layout/paciente 
+
 ## Para Instalar dependencias do projeto
 
 ```bash
