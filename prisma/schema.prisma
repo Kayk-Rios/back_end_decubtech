@@ -14,11 +14,23 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  name      String   // Certifique-se de que este campo esteja aqui
-  email     String   @unique
-  password  String
-  
+  id       Int      @id @default(autoincrement())
+  username String   @unique
+  password String
+  setores  Setor[]
 }
 
- 
+model Setor {
+  id     Int     @id @default(autoincrement())
+  name   String
+  userId Int
+  user   User    @relation(fields: [userId], references: [id])
+  leitos Leito[]
+}
+
+model Leito {
+  id       Int    @id @default(autoincrement())
+  number   String
+  setorId  Int
+  setor    Setor  @relation(fields: [setorId], references: [id])
+}
