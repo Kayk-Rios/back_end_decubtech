@@ -4,6 +4,19 @@ POST http://localhost:3000/users/register
 content-type: application/json
 
 {
-    "username": "123774-INF",
-    "password": "senha12234"
+    "username": "138494940-EGT",
+    "password": "COLORALVERDE"
 }
+###
+#Para adicionar um setor ao Usuario
+
+POST http://localhost:3000/setores
+content-type: application/json
+
+{
+  "name": "PEDIATRIA",
+  "userId": 2  
+}
+
+###Para fazer o get de setores associadoados a o seu uruario
+GET http://localhost:3000/setores/2
