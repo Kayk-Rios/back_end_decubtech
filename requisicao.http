@@ -1,5 +1,9 @@
 
+# Para criar um Usuario
+POST http://localhost:3000/users/register
+content-type: application/json
 
-GET http://localhost:4000/app/teste
-
- 
+{
+    "username": "123774-INF",
+    "password": "senha12234"
+}
