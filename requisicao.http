@@ -4,9 +4,18 @@ POST http://localhost:3000/users/register
 content-type: application/json
 
 {
-    "username": "138494940-EGT",
-    "password": "COLORALVERDE"
+    "username": "19234439-GNT",
+    "password": "COLORDEfwrgtg"
 }
+### Para fazer login
+POST http://localhost:3000/users/login
+content-type: application/json
+
+{
+     "username": "19234439-GNT",
+    "password": "COLORDEfwrgtg"
+}
+
 ###
 #Para adicionar um setor ao Usuario
 
