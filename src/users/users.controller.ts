@@ -7,7 +7,14 @@ export class UsersController {
 
     @Post('register')
     async register(@Body() body: { username: string; password: string }) {
-      return this.usersService.createUser(body);
+      try {
+        return await this.usersService.createUser(body);
+      } catch (error) {
+        if (error.message === 'Username already exists') {
+          return { message: 'Username is already taken' };
+        }
+        throw error;
+      }
     }
   
     @Post('login')
@@ -16,8 +23,7 @@ export class UsersController {
       if (!user) {
         return { message: 'Invalid credentials' };
       }
-      return user;
+      const { password, ...result } = user; 
+      return result;
     }
-
-
 }
