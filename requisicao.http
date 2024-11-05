@@ -20,3 +20,18 @@ content-type: application/json
 
 ###Para fazer o get de setores associadoados a o seu uruario
 GET http://localhost:3000/setores/2
+
+
+
+
+
+
+
+###
+
+
+# criar leito
+# autenticaçao 
+# conectar todos sistma e hospodear
+# comprar o dominio
+# criar a api fake no supabase para fazer requisiçao do hospital fake
