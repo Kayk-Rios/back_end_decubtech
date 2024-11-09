@@ -1,8 +1,8 @@
 ## Description
 
-Sistema Easy time é capaz de monitorar quanto tempo o paciente está em determinada posição e envia um alerta aos enfermeiros
+Sistema Decubtech é capaz de monitorar quanto tempo o paciente está em determinada posição e envia um alerta aos enfermeiros
 
-Desta forma, o sistema Easy time informa ao enfermeiro o momento certo para executar a mudança de decúbito e assim evitar lesões como, as úlceras de pressão
+Desta forma, o sistema Decubtech informa ao enfermeiro o momento certo para executar a mudança de decúbito e assim evitar lesões como, as úlceras de pressão
 
 Atualmente, a mudança de decúbito é feita a cada duas horas de acordo com a inspeção visual do enfermeiro. Entretanto este tempo pode ser maior ou menor de acordo com o estado do paciente
 
