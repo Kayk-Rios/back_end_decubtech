@@ -12,9 +12,6 @@ export class ExternalApiService {
 
   async fetchSetores(url: string, apiKey: string) {
     try {
-      console.log('a url da api e: ', `${url}`);
-      console.log('a apiKey da api e: ', `${apiKey}`);
-
       const response = await this.httpClient.get(`${url}/rest/v1/setores?apikey=${apiKey}`, {
         headers: {
             'Content-Type': 'application/json',
