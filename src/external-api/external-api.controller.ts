@@ -11,8 +11,8 @@ export class ExternalApiController {
         ){}
 
         @Post('setores')
-        async getSetores(@Body() body:{username: string , password: string   } ){
-            const user = await this.usersService.login(body.username, body.password);
+        async getSetores(@Body() body:{username: string } ){
+            const user = await this.usersService.findByUsername(body.username);
 
             if(!user){
                 return { message: 'credencias invalidas'};
@@ -26,15 +26,13 @@ export class ExternalApiController {
         async getLeitos(
 
             @Param('setorId') setorId : number,
-            @Body() body : {username:string , password: string}
+            @Body() body : {username:string}
         ){
-            const user = await this.usersService.login(body.username, body.password);
+            const user = await this.usersService.findByUsername(body.username);
             if(!user){
                 return { message: 'credencias invalidas'};
             }
             const {url , apiKey} = user
             const leitos = await this.externalApiService.fetchLeitos(url,apiKey , setorId)
             return leitos;
-
-
         }}
