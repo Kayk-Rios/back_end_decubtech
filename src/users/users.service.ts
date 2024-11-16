@@ -5,6 +5,8 @@ import * as bcrypt from 'bcrypt';
 interface CreateUserData {
   username: string;
   password: string;
+  url: string;
+  apiKey: string
 }
 
 @Injectable()
@@ -26,7 +28,9 @@ export class UsersService {
       return this.prisma.user.create({ 
         data: {
           username: data.username,
-          password: hashedPassword
+          password: hashedPassword,
+          url: data.url,
+          apiKey : data.apiKey
         } 
       });
     }
@@ -35,7 +39,7 @@ export class UsersService {
       const user = await this.prisma.user.findFirst({
         where: { username },
       });
-  
+
       if (user && await bcrypt.compare(password, user.password)) {
         return user;
       }
