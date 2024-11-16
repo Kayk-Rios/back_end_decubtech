@@ -18,6 +18,9 @@ model User {
   username String   @unique
   password String
   setores  Setor[]
+  url      String?
+  apiKey   String?
+
 }
 
 model Setor {
