@@ -46,7 +46,10 @@ export class UsersService {
       return null;
     }
     async findByUsername(username: string) {
-      return await this.prisma.user.findUnique({ where: { username } }); // Ajuste para o seu esquema de dados
+      if (!username) {
+        throw new Error('Username is required');
+      }
+      return await this.prisma.user.findUnique({ where: { username } });
     }
     
 }
